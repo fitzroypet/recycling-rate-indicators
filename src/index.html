@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Recycling Indicators Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="module" src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="module" src="https://d3js.org/topojson.v3.min.js"></script>
+</head>
+<body>
+    <div class="header-fixed">
+        <div class="header-content">
+            <h1>Global Recycling Indicators Dashboard</h1>
+            <div class="controls">
+                <div class="control-group">
+                    <label>Metric:</label>
+                    <select id="metricSelector">
+                        <option value="Recycling Score (2022)">Recycling Score (2022)</option>
+                        <option value="Waste Recovery Rate (2024)">Waste Recovery Rate (2024)</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Continent:</label>
+                    <select id="continentSelector">
+                        <option value="all">All Continents</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                        <option value="North America">North America</option>
+                        <option value="South America">South America</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard">
+        <div class="visualization-container">
+            <h2>Global Recycling Performance</h2>
+            <div id="map-viz"></div>
+        </div>
+
+        <div class="visualization-container">
+            <h2>Top Performing Regions</h2>
+            <div id="bar-chart"></div>
+        </div>
+
+        <div class="visualization-container">
+            <h2>Correlation Analysis</h2>
+            <div id="scatter-plot"></div>
+        </div>
+
+        <div class="visualization-container full-width">
+            <h2>Global Rankings</h2>
+            <div id="rankings-chart"></div>
+        </div>
+    </div>
+
+    <script type="module" src="js/utils/dataUtils.js"></script>
+    <script type="module" src="js/components/BaseVisualization.js"></script>
+    <script type="module" src="js/components/ChoroplethMap.js"></script>
+    <script type="module" src="js/components/RankingsChart.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
