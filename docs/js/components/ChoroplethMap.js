@@ -39,7 +39,7 @@ class ChoroplethMap extends BaseVisualization {
     
     async loadData() {
         try {
-            const response = await fetch('../data/processed/map_data.json');
+            const response = await fetch('./data/processed/map_data.json');
             this.mapData = await response.json();
             console.log('Map data loaded:', this.mapData);
             this.update();

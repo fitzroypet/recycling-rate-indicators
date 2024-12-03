@@ -52,7 +52,7 @@ class ScatterPlot extends BaseVisualization {
     
     async loadData() {
         try {
-            const response = await fetch('../data/processed/correlation_data.json');
+            const response = await fetch('./data/processed/correlation_data.json');
             this.data = await response.json();
             console.log('Scatter plot data loaded:', this.data);
             this.update();

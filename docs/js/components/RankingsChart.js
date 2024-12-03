@@ -46,7 +46,7 @@ class RankingsChart extends BaseVisualization {
             console.log('Loading rankings data...');
             
             // Use the same data source as the map
-            const response = await fetch('../data/processed/map_data.json');
+            const response = await fetch('./data/processed/map_data.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
