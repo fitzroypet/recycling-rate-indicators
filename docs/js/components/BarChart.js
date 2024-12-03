@@ -56,8 +56,8 @@ class BarChart extends BaseVisualization {
     async loadData() {
         try {
             const [countryData, continentData] = await Promise.all([
-                fetch('./data/processed/recycling_by_country.json').then(res => res.json()),
-                fetch('./data/processed/recycling_by_continent.json').then(res => res.json())
+                fetch('../data/processed/recycling_by_country.json').then(res => res.json()),
+                fetch('../data/processed/recycling_by_continent.json').then(res => res.json())
             ]);
             
             this.countryData = countryData;
