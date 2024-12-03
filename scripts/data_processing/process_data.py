@@ -39,13 +39,17 @@ class DataProcessor:
         
         # Create a country name mapping for standardization
         country_name_mapping = {
-            'United States of America': 'United States',  # Fix USA naming
             'USA': 'United States',
-            'UK': 'United Kingdom',
-            'United States': 'United States',  # Add this if needed
             'United Republic of Tanzania': 'Tanzania',
-            'Democratic Republic of the Congo': 'Congo',
-            'Republic of the Congo': 'Congo Republic'
+            'Republic of the the Congo': 'Congo Republic',
+            'Democratic Republic of the Congo': 'DR Congo',
+            'England': 'United Kingdom',
+            'Republic of Serbia': 'Serbia',
+            'Republic of Congo': 'Republic of the Congo',
+            'Bosnia and Herzegovina': 'Bosnia and Herzegovina',
+            'Guinea Bissau': 'Guinea-Bissau',
+            'Macedonia': 'North Macedonia',
+            'New Caledonia': 'Kanaky'
         }
     
         # Select only the required columns and replace NaN with None
