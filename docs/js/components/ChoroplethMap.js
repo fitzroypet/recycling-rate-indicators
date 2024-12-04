@@ -21,7 +21,7 @@ class ChoroplethMap extends BaseVisualization {
         
         // Adjust map group position to accommodate title
         this.mapGroup = this.svg.append('g')
-            .attr('transform', `translate(0, 200)`);  // Move map down
+            .attr('transform', `translate(0, 200)`);
         
         // Adjust legend size and position
         this.legendGroup = this.svg.append('g')
